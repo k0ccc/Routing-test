@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Возможные улучшения
+
+В компоненте Summary в html, взять типы приходимых данных и через ngFor создать карточки. 
+
+Можно создать дочерние компоненты для list и вызывать их уже по queryparams
+
+Компонент list, если переходим сразу в "/navigate", без "/" то данных не поступает, возможные решения: 
+    1. Брать их в list, обрабатывать там же.
+    2. Брать их в list, обрабатывать их в сервисе и принимать уже обработанные данные.  

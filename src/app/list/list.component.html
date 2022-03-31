@@ -1,0 +1,68 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a 
+        *ngIf="tab == 0;else IncomePass"
+        class="nav-link active"
+        [routerLink]="['/navigator']" [queryParams]="{tab: '0'}" >Income</a>
+        <ng-template #IncomePass>
+            <a 
+            class="nav-link" 
+            [routerLink]="['/navigator']" [queryParams]="{tab: '0'}">Income</a>
+        </ng-template>
+    </li>
+    <li class="nav-item">
+        <a
+            *ngIf="tab == 1;else OutcomePass" 
+            class="nav-link active" 
+            [routerLink]="['/navigator']" [queryParams]="{tab: '1'}">Outcome</a>
+        <ng-template #OutcomePass >
+            <a class="nav-link" 
+            [routerLink]="['/navigator']" [queryParams]="{tab: '1'}">Outcome</a>
+        </ng-template>
+    </li>
+    <li class="nav-item">
+        <a
+             *ngIf="tab == 2;else LoansPass"
+             [routerLink]="['/navigator']" [queryParams]="{tab: '2'}" 
+             class="nav-link active" >Loans</a>
+        <ng-template #LoansPass>
+            <a
+            [routerLink]="['/navigator']" [queryParams]="{tab: '2'}" 
+            class="nav-link">Loans</a>
+        </ng-template>
+    </li>
+    <li class="nav-item">
+            <a 
+            *ngIf="tab == 3;else InvestPass" 
+            [routerLink]="['/navigator']" [queryParams]="{tab: '3'}" 
+            class=" active nav-link "  >Investments</a>
+        <ng-template #InvestPass>
+            <a [routerLink]="['/navigator']" [queryParams]="{tab: '3'}" 
+             class="nav-link">Investments</a>
+        </ng-template>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="row row-cols-auto">
+        <div class="col-6 col-sm-3">
+            <p>Name</p>
+        </div>
+        <div class="col-6 col-sm-3">
+            <p>Amount</p>
+        </div>
+    </div>
+    <!-- Рендер самой вкладки -->
+    <ng-container *ngIf="tab==0">
+        <ng-container *ngFor=" let user of users">
+            <div class="row row-cols-auto">
+                <div class="col-6 col-sm-3">
+                    <p>{{user.name.first}} {{' '}} {{user.name.last}}</p>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <p>{{user.amount}}</p>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

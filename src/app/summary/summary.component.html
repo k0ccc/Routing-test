@@ -1,0 +1,40 @@
+<div class="card text-center main">
+    <h4 class="card-title">Welcome</h4>
+    <p>With supporting text below as a natural lead-in to additional content</p>
+    <button type="button" class="btn btn-primary">See transactions</button>
+    <hr>
+    <p>You have {{lengthData}} transactions</p>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+    <div class="col">
+        <div class="card text-center other" >
+            <h4 >123</h4>
+            <p>Income</p>
+            <button type="button" class="btn me-md-2 btn-primary" (click)="income()">See all</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-center other">
+            <h4 >234</h4>
+            <p>Investments</p>
+            <button type="button" class="btn me-md-2 btn-primary" (click)="invest()">See all</button>
+        </div>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-2">
+    <div class="col">
+        <div class="card text-center other">
+            <h4 >345</h4>
+            <p>Outcume</p>
+            <button type="button" class="btn me-md-2 btn-primary" (click)="outcome()">See all</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-center other">
+            <h4>345</h4>
+            <p>Loans</p>
+            <button type="button" class="btn me-md-2 btn-primary" (click)="loans()">See all</button>
+        </div>
+    </div>
+</div>
+

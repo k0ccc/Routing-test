@@ -1,0 +1,23 @@
+div.main{
+    width: 36rem;
+    h4{
+        margin-top: 2rem;
+    }
+    button{
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}
+div{
+    flex-grow: 0;    
+    div.other{
+        width: 17rem;
+        margin-top: 1rem;
+
+        button{
+            margin-left: 9rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
